@@ -1,8 +1,12 @@
+'use client'
+
 import Link from "next/link"
 import '@/app/index.css'
+import { useState } from "react"
 
 export default function HeadNav()
 {
+    const [isActive, setActive] = useState(false)
     const links = [        
         {
             'name': 'TODAY BEST',
@@ -32,11 +36,21 @@ export default function HeadNav()
                         ))
                     }
                 </div>
+                
+                <div className={isActive ? 'block' : 'hidden'}>
+                    <div className="flex flex-none font-bold mx-3">
+                        <h1 className="text-xl md:text-2xl">
+                            <Link href='/myinfo'>내 정보</Link>
+                        </h1>
+                    </div>
+                </div>
 
-                <div className="flex flex-none font-bold mx-3">
-                    <h1 className="text-xl md:text-2xl">
-                        <Link href='/myinfo'>내 정보</Link>
-                    </h1>
+                <div className={isActive ? 'hidden' : 'block'}>
+                    <div className="flex flex-none font-bold mx-3">
+                        <h1 className="text-xl md:text-2xl">
+                            <Link href='/login'>로그인</Link>
+                        </h1>
+                    </div>
                 </div>
             </div>
 
