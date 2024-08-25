@@ -12,6 +12,10 @@
         @apply mx-4 px-3 font-bold text-lg rounded-lg hover:bg-sky-600 md:hidden nav-item-animation;    
     }
 
+    .nav-item-effect {
+        @apply px-1 rounded-md hover:bg-sky-600 nav-item-animation;
+    }
+
     .nav-item-animation {
         @apply transition-all duration-300 cursor-pointer;
     }

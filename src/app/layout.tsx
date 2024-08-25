@@ -22,8 +22,13 @@ export default function RootLayout({
           <div className="flex">
             <HeadNav />
           </div>
+          
           <div className="flex flex-1">
             {children}
+          </div>
+
+          <div className="flex bg-gray-800 mt-5 p-7 justify-center">
+            <p className="text-gray-500">Copyright © Isekai Books 2024. All Rights Reserved.</p>
           </div>
         </div>
       </body>
