@@ -12,8 +12,8 @@ export default function HeadNav()
     function showUserMenus()
     {
         return [
-            <Link className="nav-item-effect" href='/write'> <CiPen size={35} /></Link>, 
-            <Link className="nav-item-effect" href='/favorite'> <CiHeart size={35} /></Link>
+            <Link key={44} className="nav-item-effect" href='/write'> <CiPen size={35} /></Link>, 
+            <Link key={55} className="nav-item-effect" href='/favorite'> <CiHeart size={35} /></Link>
         ]
     }
 
@@ -23,15 +23,15 @@ export default function HeadNav()
             <div className="flex flex-row p-3 justify-between items-center">
                 <div className="flex flex-none font-bold mx-3 items-center">
                     <h1 className="text-xl md:text-2xl">
-                        <Link href='/'>Isekai Books</Link>
+                        <Link key={0} href='/'>Isekai Books</Link>
                     </h1>
                 </div>
                 <div className="flex flex-row justify-around">
-                    <Link className="nav-item" href='/ranking'>
+                    <Link key={1} className="nav-item" href='/ranking'>
                         Ranking
                     </Link>
 
-                    <Link className="nav-item" href='/search'>
+                    <Link key={2} className="nav-item" href='/search'>
                         Search
                     </Link>
                 </div>
@@ -44,8 +44,8 @@ export default function HeadNav()
 
                         {
                             isActive
-                            ? <Link className="nav-item-effect" href='/logout'><CiLogout size={35} /></Link>
-                            : <Link className="nav-item-effect" href='/login'><CiLogin size={35} /></Link>  
+                            ? <Link key={22} className="nav-item-effect" href='/logout'><CiLogout size={35} /></Link>
+                            : <Link key={33} className="nav-item-effect" href='/login'><CiLogin size={35} /></Link>  
                         }
 
                     </div>
@@ -53,11 +53,11 @@ export default function HeadNav()
             </div>
 
             <div className="flex flex-row p-3 justify-around md:hidden">
-                <Link className="nav-item-moible" href='/ranking'>
+                <Link key={3} className="nav-item-moible" href='/ranking'>
                     Ranking
                 </Link>
 
-                <Link className="nav-item-moible" href='/search'>
+                <Link key={4} className="nav-item-moible" href='/search'>
                     Search
                 </Link>
             </div>
