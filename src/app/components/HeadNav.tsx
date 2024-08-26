@@ -7,21 +7,21 @@ import { CiLogin, CiHeart, CiPen, CiLogout } from "react-icons/ci";
 
 export default function HeadNav()
 {
-    const [isActive, setActive] = useState(false)
+    const [isActive, setActive] = useState(true)
 
     function showUserMenus()
     {
         return [
             <Link className="nav-item-effect" href='/write'> <CiPen size={35} /></Link>, 
-            <Link className="nav-item-effect" href='/search'> <CiHeart size={35} /></Link>
+            <Link className="nav-item-effect" href='/favorite'> <CiHeart size={35} /></Link>
         ]
     }
 
     return (
-        <header className="w-screen flex grow-0 flex-col shadow-md bg-sky-400 text-neutral-50 sticky top-0">
+        <header className="w-screen flex flex-col shadow-md bg-[#365486] text-neutral-50 sticky top-0">
 
-            <div className="flex flex-row p-3 justify-between">
-                <div className="flex flex-none font-bold mx-3">
+            <div className="flex flex-row p-3 justify-between items-center">
+                <div className="flex flex-none font-bold mx-3 items-center">
                     <h1 className="text-xl md:text-2xl">
                         <Link href='/'>Isekai Books</Link>
                     </h1>
@@ -36,7 +36,7 @@ export default function HeadNav()
                     </Link>
                 </div>
 
-                <div>
+                <div className="items-center">
                     <div className="flex flex-row font-bold mx-1">
                         {
                             isActive && showUserMenus()

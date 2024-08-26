@@ -5,18 +5,22 @@
 @layer components {
 
     .nav-item {
-        @apply mx-4 px-3 font-bold text-lg hidden rounded-lg hover:bg-sky-600 md:block md:text-2xl nav-item-animation;
+        @apply mx-4 px-3 font-bold text-lg hidden rounded-lg hover:bg-[#0F1035] md:block md:text-2xl nav-item-animation;
     }
 
     .nav-item-mobile {
-        @apply mx-4 px-3 font-bold text-lg rounded-lg hover:bg-sky-600 md:hidden nav-item-animation;    
+        @apply mx-4 px-3 font-bold text-lg rounded-lg hover:bg-[#0F1035] md:hidden nav-item-animation;    
     }
 
     .nav-item-effect {
-        @apply px-1 rounded-md hover:bg-sky-600 nav-item-animation;
+        @apply px-1 rounded-md hover:bg-[#0F1035] nav-item-animation;
     }
 
     .nav-item-animation {
         @apply transition-all duration-300 cursor-pointer;
+    }
+
+    .tag-nav-item {
+        @apply text-lg font-semibold rounded-md mx-3 px-2 text-white hover:bg-[#0F1035];
     }
 }

@@ -19,7 +19,10 @@ export default function BookCard({title, description, rank}: CardInput)
             </div>
             
             <div className="w-full flex flex-col p-4 overflow-hidden">
-                <h3 className="text-md truncate md:text-xl">{title}</h3>
+                <div className="flex flex-row items-center gap-2">
+                    <h3 className="text-md font-bold truncate md:text-xl">{title}</h3>
+                    <p className="text-sm">KxxDD</p>
+                </div>
                 <div className="text-sm truncate md:text-md">{description}</div>
             </div>
         </div>
