@@ -1,5 +1,6 @@
 import { FaBeer } from 'react-icons/fa';
 import BookCard from './components/BookCard';
+import TagNav from './components/TagNav';
 
 export default function Home() {
 
@@ -57,7 +58,6 @@ export default function Home() {
 
   return (
     <div className='w-screen flex flex-col items-center'>
-      
       <div className='flex mt-5 text-2xl font-bold'>
         <h1>TOP 10</h1>
       </div>
