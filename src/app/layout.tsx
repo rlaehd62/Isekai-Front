@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import HeadNav from "./components/HeadNav";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "이세계 문고",
-  description: "모든 소설이 생성형 AI에 의해서 제공되는 최초의 서비스!",
+  title: "Isekai Books",
+  description: "First AI Web-Novel Service, I've never seen in this world.",
 };
 
 export default function RootLayout({
@@ -23,12 +24,12 @@ export default function RootLayout({
             <HeadNav />
           </div>
           
-          <div className="flex flex-1">
+          <div className="flex flex-1 min-h-screen">
             {children}
           </div>
 
-          <div className="flex bg-gray-800 mt-5 p-7 justify-center">
-            <p className="text-gray-500">Copyright © Isekai Books 2024. All Rights Reserved.</p>
+          <div className="flex relative h-full">
+            <Footer />
           </div>
         </div>
       </body>
