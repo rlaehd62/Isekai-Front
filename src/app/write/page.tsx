@@ -1,7 +1,12 @@
+'use client'
+
+import { useState } from 'react'
 import './index.css'
 
 export default function page()
 {
+    const [plot, setPlot] = useState('')
+
     return (
         <div className="flex flex-col w-full bg-gray-100 rounded-lg p-5 m-2 gap-2 shadow-lg md:w-2/5 md:mx-auto">
             
@@ -27,7 +32,7 @@ export default function page()
 
             <div className="flex flex-col m-2">
                 <div className="text-xl font-semibold">Plot</div>
-                <input className="write-input h-36" type="text" value='(will be replaced with bigger thing)' />
+                <textarea className="write-input h-36" value={plot} onChange={(e) => { setPlot(e.target.value)}} placeholder='(will be replaced with bigger thing)' />
             </div>
 
             <div className='flex flex-row m-2 gap-2 items-center justify-around'>
