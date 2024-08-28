@@ -7,7 +7,7 @@ import { CiLogin, CiHeart, CiPen, CiLogout } from "react-icons/ci";
 
 export default function HeadNav()
 {
-    const [isActive, setActive] = useState(true)
+    const [isActive, setActive] = useState(false)
 
     function showUserMenus()
     {
