@@ -24,12 +24,12 @@ export default function HeadNav()
             <div className="flex flex-row p-3 justify-between items-center">
                 <div className="flex flex-none font-bold mx-3 items-center">
                     <h1 className="text-xl md:text-2xl">
-                        <HeadNavItem id={0} value='Isekai Books' to='/' />
+                        <HeadNavItem id={0} to='/'>Isekai Books</HeadNavItem>
                     </h1>
                 </div>
                 <div className="flex flex-row justify-around">
-                    <HeadNavItem className='nav-item' id={1} value='Ranking' to='/ranking' />
-                    <HeadNavItem className='nav-item' id={2} value='Search' to='/search' />
+                    <HeadNavItem className='nav-item' id={1} to='/ranking'>Ranking</HeadNavItem>
+                    <HeadNavItem className='nav-item' id={2} to='/search'>Search</HeadNavItem>
                 </div>
 
                 <div className="items-center">
@@ -40,8 +40,8 @@ export default function HeadNav()
 
                         {
                             isActive
-                            ? <Link key={22} className="nav-item-effect" href='/logout'><CiLogout size={35} /></Link>
-                            : <Link key={33} className="nav-item-effect" href='/login'><CiLogin size={35} /></Link>  
+                            ? <HeadNavItem className='nav-item-effect' id={22} to='/logout'><CiLogout size={35} /></HeadNavItem>
+                            : <HeadNavItem className='nav-item-effect' id={33} to='/login'><CiLogin size={35} /></HeadNavItem>
                         }
 
                     </div>
@@ -49,8 +49,8 @@ export default function HeadNav()
             </div>
 
             <div className="flex flex-row p-3 justify-around md:hidden">
-                <HeadNavItem className='nav-item-moible' id={3} value='Ranking' to='/ranking' />
-                <HeadNavItem className='nav-item-moible' id={4} value='Search' to='/search' />
+                <HeadNavItem className='nav-item-moible' id={3} to='/ranking'>Ranking</HeadNavItem>
+                <HeadNavItem className='nav-item-moible' id={4} to='/search'>Search</HeadNavItem>
             </div>
         </header>
     )

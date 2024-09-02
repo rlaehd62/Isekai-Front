@@ -35,8 +35,8 @@ export default function page()
             </div>
 
             <div className="flex flex-row p-3 w-full gap-3">
-                <button className="login-button"><Link href='/signup'>회원가입</Link></button>
-                <button className="login-button" onClick={(e) => { e.preventDefault(); console.log(username + '/' + password)}}>로그인</button>
+                <button className="login-button"><Link href='/signup'>Sign Up</Link></button>
+                <button className="login-button" onClick={(e) => { e.preventDefault(); console.log(username + '/' + password)}}>Sign In</button>
             </div>
         </div>
     )    

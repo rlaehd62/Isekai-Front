@@ -4,15 +4,15 @@ interface NavItemType
 {
     id: number;
     to: string;
-    value: string;
     className?: string;
+    children?: React.ReactNode;
 }
 
-export default function HeadNavItem({id, to, value, className}: NavItemType)
+export default function HeadNavItem({id, to, className, children}: NavItemType)
 {
     return (
         <Link key={id} href={to} className={className}>
-            {value}
+            {children}
         </Link>
     )
 }
