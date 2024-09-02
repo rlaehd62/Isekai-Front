@@ -4,10 +4,11 @@ import Link from "next/link"
 import '@/app/index.css'
 import { useState } from "react"
 import { CiLogin, CiHeart, CiPen, CiLogout } from "react-icons/ci";
+import HeadNavItem from "./HeadNavItem";
 
 export default function HeadNav()
 {
-    const [isActive, setActive] = useState(false)
+    const [isActive, setActive] = useState(true)
 
     function showUserMenus()
     {
@@ -23,17 +24,12 @@ export default function HeadNav()
             <div className="flex flex-row p-3 justify-between items-center">
                 <div className="flex flex-none font-bold mx-3 items-center">
                     <h1 className="text-xl md:text-2xl">
-                        <Link key={0} href='/'>Isekai Books</Link>
+                        <HeadNavItem id={0} value='Isekai Books' to='/' />
                     </h1>
                 </div>
                 <div className="flex flex-row justify-around">
-                    <Link key={1} className="nav-item" href='/ranking'>
-                        Ranking
-                    </Link>
-
-                    <Link key={2} className="nav-item" href='/search'>
-                        Search
-                    </Link>
+                    <HeadNavItem className='nav-item' id={1} value='Ranking' to='/ranking' />
+                    <HeadNavItem className='nav-item' id={2} value='Search' to='/search' />
                 </div>
 
                 <div className="items-center">
@@ -53,13 +49,8 @@ export default function HeadNav()
             </div>
 
             <div className="flex flex-row p-3 justify-around md:hidden">
-                <Link key={3} className="nav-item-moible" href='/ranking'>
-                    Ranking
-                </Link>
-
-                <Link key={4} className="nav-item-moible" href='/search'>
-                    Search
-                </Link>
+                <HeadNavItem className='nav-item-moible' id={3} value='Ranking' to='/ranking' />
+                <HeadNavItem className='nav-item-moible' id={4} value='Search' to='/search' />
             </div>
         </header>
     )
