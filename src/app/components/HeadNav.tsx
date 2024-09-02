@@ -13,8 +13,8 @@ export default function HeadNav()
     function showUserMenus()
     {
         return [
-            <HeadNavItem className='nav-item-effect' id={44} to='/write'><CiPen size={35} /></HeadNavItem>,
-            <HeadNavItem className='nav-item-effect' id={55} to='/favorite'><CiHeart size={35} /></HeadNavItem>
+            <HeadNavItem key={1} className='nav-item-effect' to='/write'><CiPen size={35} /></HeadNavItem>,
+            <HeadNavItem key={2} className='nav-item-effect' to='/favorite'><CiHeart size={35} /></HeadNavItem>
         ]
     }
 
@@ -24,11 +24,11 @@ export default function HeadNav()
             <div className="flex flex-row p-3 justify-between items-center">
                 <div className="flex flex-none font-bold mx-3 items-center">
                     <h1 className="text-xl md:text-2xl">
-                        <HeadNavItem id={0} to='/'>Isekai Books</HeadNavItem>
+                        <HeadNavItem key={3} to='/'>Isekai Books</HeadNavItem>
                     </h1>
                 </div>
                 <div className="flex flex-row justify-around">
-                    <HeadNavItem className='nav-item' id={1} to='/ranking'>Ranking</HeadNavItem>
+                    <HeadNavItem className='nav-item' key={4} to='/ranking'>Ranking</HeadNavItem>
                     {/* <HeadNavItem className='nav-item' id={2} to='/search'>Search</HeadNavItem> */}
                 </div>
 
@@ -40,8 +40,8 @@ export default function HeadNav()
 
                         {
                             isActive
-                            ? <HeadNavItem className='nav-item-effect' id={22} to='/logout'><CiLogout size={35} /></HeadNavItem>
-                            : <HeadNavItem className='nav-item-effect' id={33} to='/login'><CiLogin size={35} /></HeadNavItem>
+                            ? <HeadNavItem className='nav-item-effect' key={5} to='/logout'><CiLogout size={35} /></HeadNavItem>
+                            : <HeadNavItem className='nav-item-effect' key={6} to='/login'><CiLogin size={35} /></HeadNavItem>
                         }
 
                     </div>
@@ -49,9 +49,9 @@ export default function HeadNav()
             </div>
 
             <div className="flex flex-row p-3 justify-around md:hidden">
-                <HeadNavItem className='nav-item-moible' id={3} to='/ranking'>Ranking</HeadNavItem>
+                <HeadNavItem className='nav-item-moible' key={7} to='/ranking'>Ranking</HeadNavItem>
                 {/* <HeadNavItem className='nav-item-moible' id={4} to='/search'>Search</HeadNavItem> */}
             </div>
         </header>
     )
-}
+}   
