@@ -13,8 +13,8 @@ export default function HeadNav()
     function showUserMenus()
     {
         return [
-            <Link key={44} className="nav-item-effect" href='/write'> <CiPen size={35} /></Link>, 
-            <Link key={55} className="nav-item-effect" href='/favorite'> <CiHeart size={35} /></Link>
+            <HeadNavItem className='nav-item-effect' id={44} to='/write'><CiPen size={35} /></HeadNavItem>,
+            <HeadNavItem className='nav-item-effect' id={55} to='/favorite'><CiHeart size={35} /></HeadNavItem>
         ]
     }
 
@@ -29,7 +29,7 @@ export default function HeadNav()
                 </div>
                 <div className="flex flex-row justify-around">
                     <HeadNavItem className='nav-item' id={1} to='/ranking'>Ranking</HeadNavItem>
-                    <HeadNavItem className='nav-item' id={2} to='/search'>Search</HeadNavItem>
+                    {/* <HeadNavItem className='nav-item' id={2} to='/search'>Search</HeadNavItem> */}
                 </div>
 
                 <div className="items-center">
@@ -50,7 +50,7 @@ export default function HeadNav()
 
             <div className="flex flex-row p-3 justify-around md:hidden">
                 <HeadNavItem className='nav-item-moible' id={3} to='/ranking'>Ranking</HeadNavItem>
-                <HeadNavItem className='nav-item-moible' id={4} to='/search'>Search</HeadNavItem>
+                {/* <HeadNavItem className='nav-item-moible' id={4} to='/search'>Search</HeadNavItem> */}
             </div>
         </header>
     )
