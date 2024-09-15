@@ -8,7 +8,7 @@ import HeadNavItem from "./HeadNavItem";
 
 export default function HeadNav()
 {
-    const [isActive, setActive] = useState(true)
+    const [isActive, setActive] = useState(false)
 
     function showUserMenus()
     {
