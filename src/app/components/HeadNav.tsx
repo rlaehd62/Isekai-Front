@@ -4,16 +4,17 @@ import Link from "next/link"
 import '@/app/index.css'
 import { useState } from "react"
 import { CiLogin, CiHeart, CiPen, CiLogout } from "react-icons/ci";
+import HeadNavItem from "./HeadNavItem";
 
 export default function HeadNav()
 {
-    const [isActive, setActive] = useState(true)
+    const [isActive, setActive] = useState(false)
 
     function showUserMenus()
     {
         return [
-            <Link key={44} className="nav-item-effect" href='/write'> <CiPen size={35} /></Link>, 
-            <Link key={55} className="nav-item-effect" href='/favorite'> <CiHeart size={35} /></Link>
+            <HeadNavItem key={1} className='nav-item-effect' to='/write'><CiPen size={35} /></HeadNavItem>,
+            <HeadNavItem key={2} className='nav-item-effect' to='/favorite'><CiHeart size={35} /></HeadNavItem>
         ]
     }
 
@@ -23,17 +24,12 @@ export default function HeadNav()
             <div className="flex flex-row p-3 justify-between items-center">
                 <div className="flex flex-none font-bold mx-3 items-center">
                     <h1 className="text-xl md:text-2xl">
-                        <Link key={0} href='/'>Isekai Books</Link>
+                        <HeadNavItem key={3} to='/'>Isekai Books</HeadNavItem>
                     </h1>
                 </div>
                 <div className="flex flex-row justify-around">
-                    <Link key={1} className="nav-item" href='/ranking'>
-                        Ranking
-                    </Link>
-
-                    <Link key={2} className="nav-item" href='/search'>
-                        Search
-                    </Link>
+                    <HeadNavItem className='nav-item' key={4} to='/ranking'>Ranking</HeadNavItem>
+                    {/* <HeadNavItem className='nav-item' id={2} to='/search'>Search</HeadNavItem> */}
                 </div>
 
                 <div className="items-center">
@@ -44,8 +40,8 @@ export default function HeadNav()
 
                         {
                             isActive
-                            ? <Link key={22} className="nav-item-effect" href='/logout'><CiLogout size={35} /></Link>
-                            : <Link key={33} className="nav-item-effect" href='/login'><CiLogin size={35} /></Link>  
+                            ? <HeadNavItem className='nav-item-effect' key={5} to='/logout'><CiLogout size={35} /></HeadNavItem>
+                            : <HeadNavItem className='nav-item-effect' key={6} to='/login'><CiLogin size={35} /></HeadNavItem>
                         }
 
                     </div>
@@ -53,14 +49,9 @@ export default function HeadNav()
             </div>
 
             <div className="flex flex-row p-3 justify-around md:hidden">
-                <Link key={3} className="nav-item-moible" href='/ranking'>
-                    Ranking
-                </Link>
-
-                <Link key={4} className="nav-item-moible" href='/search'>
-                    Search
-                </Link>
+                <HeadNavItem className='nav-item-moible' key={7} to='/ranking'>Ranking</HeadNavItem>
+                {/* <HeadNavItem className='nav-item-moible' id={4} to='/search'>Search</HeadNavItem> */}
             </div>
         </header>
     )
-}
+}   
